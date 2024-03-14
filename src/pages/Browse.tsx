@@ -1,0 +1,41 @@
+import { useLoaderData } from "react-router-dom"
+import Banner from "../Components/Banner"
+import List from "../Components/List"
+import { useMovieStore } from "../store/MovieStore"
+import { Movie } from "../types/Movie"
+import { useEffect } from "react"
+import Logo from "../Components/Logo"
+import Header from "../Components/Header"
+
+export async function getMovies(){
+  const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=7057a8aa5d54803c7ff79b563c30d0ec&page=1")
+  const adventureResponse = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=7057a8aa5d54803c7ff79b563c30d0ec&with_genres=12&page=2")
+  const horrorResponse = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=7057a8aa5d54803c7ff79b563c30d0ec&with_genres=27&page=2")
+  const jsonResponse = await response.json()
+  const adventureJson = await adventureResponse.json()
+  const horrorJson = await horrorResponse.json()
+  const movies:Movie[] = jsonResponse.results;
+  const adventureMovies:Movie[] = adventureJson.results;
+  const horrorMovies:Movie[] = horrorJson.results;
+  return { data: movies,adventureMovies,horrorMovies };
+}
+
+const Browse = () => {
+  const { data,adventureMovies,horrorMovies } = useLoaderData() as Awaited<ReturnType<typeof getMovies>>
+  const { setMovies,setAdventureMovies,setHorrorMovies } = useMovieStore();
+  useEffect(() => {
+      setMovies(data)
+      setAdventureMovies(adventureMovies)
+      setHorrorMovies(horrorMovies)
+  },[]);
+  return (
+    <>
+    <div className="bg-black z-0 relative text-white min-h-full p-0 m-0">
+    <Banner></Banner>
+    <List></List>
+    </div>
+    </>
+  )
+}
+
+export default Browse
