@@ -1,4 +1,3 @@
-import Header from "../Components/Header"
 import HomePageHeader from "../Components/HomePageHeader"
 
 const Homepage = () => {

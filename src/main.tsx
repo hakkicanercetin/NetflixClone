@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Link, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import "../index.css"
 import Root from './Components/Root';
 import Register from './pages/Register';
@@ -10,7 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import "./style.css"
 import { ConfigProvider } from 'antd';
 import Homepage from './pages/Homepage';
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root></Root>,

@@ -4,8 +4,6 @@ import List from "../Components/List"
 import { useMovieStore } from "../store/MovieStore"
 import { Movie } from "../types/Movie"
 import { useEffect } from "react"
-import Logo from "../Components/Logo"
-import Header from "../Components/Header"
 
 export async function getMovies(){
   const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=7057a8aa5d54803c7ff79b563c30d0ec&page=1")
