@@ -120,7 +120,7 @@ const FormCard = ({title="Sing in"}) => {
     }
     </div>
     <div className="">
-      <div className="text-[#737373] text-[1rem] font-medium mt-4">{location.pathname == "/login" ? "Existing user?" : "New to Netflix?"}
+      <div className="text-[#737373] text-[1rem] font-medium mt-4">{location.pathname == "/login" ? "Already have an account?" : "New to Netflix?"}
         <Link className="text-white" to={location.pathname=="/login" ? "/register" : "/login"}>{location.pathname == "/login" ? "Sign up now" : "Sign in now"}</Link>.
       </div>
       <div className='text-[#8c8c8c] text-[13px] mt-[11px] relative text-left'>
