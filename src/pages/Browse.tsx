@@ -1,6 +1,6 @@
-import { useLoaderData } from "react-router-dom"
-import Banner from "../Components/Banner"
-import List from "../Components/List"
+import { useLoaderData, useNavigate } from "react-router-dom"
+import Banner from "../Components/BrowsePageComponents/Banner/Banner"
+import List from "../Components/BrowsePageComponents/List/List"
 import { useMovieStore } from "../store/MovieStore"
 import { Movie } from "../types/Movie"
 import { useEffect } from "react"
@@ -21,6 +21,15 @@ export async function getMovies(){
 const Browse = () => {
   const { data,adventureMovies,horrorMovies } = useLoaderData() as Awaited<ReturnType<typeof getMovies>>
   const { setMovies,setAdventureMovies,setHorrorMovies } = useMovieStore();
+  const navigate = useNavigate()
+  useEffect(()=>{
+    const userDataString = sessionStorage.getItem("userData");
+    const user = userDataString ? JSON.parse(userDataString) : null;
+    if(!user)
+    {
+      navigate("/login")
+    }
+  })
   useEffect(() => {
       setMovies(data)
       setAdventureMovies(adventureMovies)

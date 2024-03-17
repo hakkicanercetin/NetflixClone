@@ -2,14 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 import "../index.css"
-import Root from './Components/Root';
+import Root from './Components/CommonComponents/Root';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Browse, { getMovies } from './pages/Browse';
 import { Toaster } from 'react-hot-toast';
-import "./style.css"
 import { ConfigProvider } from 'antd';
 import Homepage from './pages/Homepage';
+
 const router = createHashRouter([
   {
     path: "/",
@@ -35,7 +35,6 @@ const router = createHashRouter([
     ]
   },
 ]);
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ConfigProvider

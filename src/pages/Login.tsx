@@ -1,7 +1,7 @@
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
-import FormCard from '../Components/FormCard'
-import Background from '../Components/Background'
+import Header from '../Components/LoginAndResigterComponents/Navbar/Header'
+import Footer from '../Components/CommonComponents/Footer'
+import FormCard from '../Components/LoginAndResigterComponents/FornCard/FormCard'
+import Background from '../Components/LoginAndResigterComponents/Background/Background'
 
 const Login = () => {
   return (

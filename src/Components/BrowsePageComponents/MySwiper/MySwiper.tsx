@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import useClickedMovieStore from '../store/ClickedMovieStore';
-import { Movie } from '../types/Movie';
+import useClickedMovieStore from '../../../store/ClickedMovieStore';
+import { Movie } from '../../../types/Movie';
 
 const MySwiper = ({movies}:{movies:Movie[]}) => {
   const { setClickedMovies } = useClickedMovieStore();
@@ -26,7 +26,7 @@ const MySwiper = ({movies}:{movies:Movie[]}) => {
       }}
     >
       {movies.map((movie, index) => (
-        <SwiperSlide key={index} className='posters flex py-5 overflow-x-scroll overflow-y-hidden'>
+        <SwiperSlide key={index} className='posters flex py-5 overflow-hidden'>
           <img
             onClick={() => handleClick(movie)}
             className="mr-[10px] max-h-[500px] object-contain opacity-80 transition-all w-full cursor-pointer hover:relative hover:scale-125"

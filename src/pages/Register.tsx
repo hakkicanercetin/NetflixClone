@@ -1,7 +1,7 @@
-import Background from "../Components/Background"
-import Footer from "../Components/Footer"
-import FormCard from "../Components/FormCard"
-import Header from "../Components/Header"
+import Background from "../Components/LoginAndResigterComponents/Background/Background"
+import Footer from "../Components/CommonComponents/Footer"
+import FormCard from "../Components/LoginAndResigterComponents/FornCard/FormCard"
+import Header from "../Components/LoginAndResigterComponents/Navbar/Header"
 
 const Register = () => {
   return (

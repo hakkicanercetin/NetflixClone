@@ -1,9 +1,9 @@
-import useClickedMovieStore from "../store/ClickedMovieStore";
-import { useMovieStore } from "../store/MovieStore";
+import useClickedMovieStore from "../../../store/ClickedMovieStore";
+import { useMovieStore } from "../../../store/MovieStore";
 import { Modal } from "antd";
 import { useEffect, useState } from "react";
-import { Movie } from "../types/Movie";
-import { Trailer } from "../types/Trailer";
+import { Movie } from "../../../types/Movie";
+import { Trailer } from "../../../types/Trailer";
 const getTrailer = async (movie:Movie) => {
   const response = await fetch("https://api.themoviedb.org/3/movie/"+movie.id+"/videos?language=en-US&api_key=7057a8aa5d54803c7ff79b563c30d0ec")
   const data:Trailer = await response.json()

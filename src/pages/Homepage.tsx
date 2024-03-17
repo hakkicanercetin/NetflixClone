@@ -1,8 +1,8 @@
-import HomePageHeader from "../Components/HomePageHeader"
+import HomePageComp from "../Components/HomePageComponents"
 
 const Homepage = () => {
   return (
-    <HomePageHeader></HomePageHeader>
+    <HomePageComp></HomePageComp>
   )
 }
 

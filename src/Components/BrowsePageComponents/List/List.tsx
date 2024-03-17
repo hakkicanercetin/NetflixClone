@@ -1,6 +1,6 @@
-import { useMovieStore } from "../store/MovieStore";
-import Footer from "./Footer";
-import MySwiper from "./MySwiper";
+import { useMovieStore } from "../../../store/MovieStore";
+import Footer from "../../CommonComponents/Footer";
+import MySwiper from "../MySwiper/MySwiper";
 
 const List = () => {
   const { movies,adventureMovies,horrorMovies } = useMovieStore();

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { auth } from "../firebaseConfig"
+import { auth } from "../../../firebaseConfig"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import toast from 'react-hot-toast'
 import { BarLoader } from 'react-spinners'
@@ -18,6 +18,7 @@ const FormCard = ({title="Sing in"}) => {
     e.preventDefault()
     try {
       await signInWithEmailAndPassword(auth, mail, password)
+      sessionStorage.setItem('userData', JSON.stringify(auth));
       const gecikmeliYonlendir = () => {
         setLoading(true)
         toast.success('Login successful')
