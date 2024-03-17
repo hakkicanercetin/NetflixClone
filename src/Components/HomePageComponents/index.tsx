@@ -1,4 +1,3 @@
-import "../style.css"
 import MoreReasonToJoin from "./MoreReasonToJoin/MoreReasonToJoin"
 import Plan from "./Plan/Plan"
 import Header from "./Header/Header"
