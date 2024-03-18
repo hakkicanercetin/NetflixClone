@@ -6,6 +6,7 @@ import { Movie } from "../../../types/Movie";
 import { Trailer } from "../../../types/Trailer";
 const getTrailer = async (movie:Movie) => {
   const apiKey = process.env.TMDB_API_KEY
+  console.log(apiKey)
   const response = await fetch("https://api.themoviedb.org/3/movie/"+movie.id+"/videos?language=en-US&api_key="+apiKey)
   const data:Trailer = await response.json()
   const trailer = data.results.find((video) => video.type === "Trailer");
