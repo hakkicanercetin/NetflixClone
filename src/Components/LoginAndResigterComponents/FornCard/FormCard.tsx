@@ -69,7 +69,7 @@ const FormCard = ({title="Sing in"}) => {
   }
   return (
     <>
-    <div className='smm:bg-transparent smm:max-w-[450px] smm:min-h-[100vh] smm:mt-0 smm:mx-auto smm:mb-[-236px] text-[#333] my-0 mx-auto py-0 smm:before:h-[91px] smm:before:block max-[740px]:px-[5%] after:block after:h-[236px]'>
+    <div className='smm:bg-transparent smm:max-w-[450px] smm:min-h-[100vh] smm:mt-0 smm:mx-auto smm:mb-[-236px] text-[#333] my-0 mx-auto py-0 smm:before:h-[91px] smm:before:block max-[740px]:px-[5%] after:block after:h-[236px] max-[739px]:relative max-[739px]:top-[100px]'>
     <div>
     <div className="smm:min-h-[660px] min-h-[550px] smm:mb-[90px] smm:pt-[60px] smm:px-[68px] smm:pb-[40px] bg-[rgba(0,0,0,.75)] rounded flex flex-col m-0 pt-5 px-0 pb-[30px] w-full">
     <div className="flex-grow">
