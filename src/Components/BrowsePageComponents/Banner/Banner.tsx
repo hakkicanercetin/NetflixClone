@@ -4,9 +4,8 @@ import { Modal } from "antd";
 import { useEffect, useState } from "react";
 import { Movie } from "../../../types/Movie";
 import { Trailer } from "../../../types/Trailer";
-import MYAPI_KEY from "./APIKEY";
 const getTrailer = async (movie:Movie) => {
-  const apiKey = MYAPI_KEY.TMDB_API_KEY;
+  const apiKey = process.env.TMDB_API_KEY
   const response = await fetch("https://api.themoviedb.org/3/movie/"+movie.id+"/videos?language=en-US&api_key="+apiKey)
   const data:Trailer = await response.json()
   const trailer = data.results.find((video) => video.type === "Trailer");
