@@ -5,9 +5,7 @@ import { useEffect, useState } from "react";
 import { Movie } from "../../../types/Movie";
 import { Trailer } from "../../../types/Trailer";
 const getTrailer = async (movie:Movie) => {
-  const apiKey = process.env.TMDB_API_KEY;
-  console.log(apiKey)
-  const response = await fetch("https://api.themoviedb.org/3/movie/"+movie.id+"/videos?language=en-US&api_key="+apiKey)
+  const response = await fetch("https://api.themoviedb.org/3/movie/"+movie.id+"/videos?language=en-US&api_key=7057a8aa5d54803c7ff79b563c30d0ec")
   const data:Trailer = await response.json()
   const trailer = data.results.find((video) => video.type === "Trailer");
   return trailer ? trailer.key : null;
