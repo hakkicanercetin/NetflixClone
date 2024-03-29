@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createHashRouter } from 'react-router-dom';
@@ -9,7 +10,6 @@ import Browse, { getMovies } from './pages/Browse';
 import { Toaster } from 'react-hot-toast';
 import { ConfigProvider } from 'antd';
 import Homepage from './pages/Homepage';
-
 const router = createHashRouter([
   {
     path: "/",
