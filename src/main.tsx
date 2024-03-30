@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 import "../index.css"
-import Root from './Components/CommonComponents/Root';
+//import Root from './Components/CommonComponents/Root';
 //import Register from './pages/Register';
 //import Login from './pages/Login';
 //import Browse, { getMovies } from './pages/Browse';
@@ -13,7 +13,7 @@ import { ConfigProvider } from 'antd';
 const router = createHashRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element: <div>Merhaba</div>,
     /* children:[
       {
         index:true,
