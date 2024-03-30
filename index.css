@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('./src/assets/netflix-sans-font/NetflixSans-Regular.woff2') format('woff2');
+  /* Add additional formats and paths if necessary */
+}
+
+body {
+  font-family: "Netflix Sans", Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
+
+.bg-gradient2 {
+  background-image: linear-gradient(91deg, rgb(38, 23, 51), rgb(21, 26, 63));
+}
+.homepage-background-gradient{
+  background-image: linear-gradient(50deg, rgba(0, 0, 0, 0.9000) 20.00%, rgba(0, 0, 0, 0.8965) 26.50%, rgba(0, 0, 0, 0.8861) 33.00%, rgba(0, 0, 0, 0.8688) 39.50%, rgba(0, 0, 0, 0.8444) 46.00%, rgba(0, 0, 0, 0.8132) 52.50%, rgba(0, 0, 0, 0.7750) 59.00%, rgba(0, 0, 0, 0.7368) 65.50%, rgba(0, 0, 0, 0.7056) 72.00%, rgba(0, 0, 0, 0.6813) 78.50%, rgba(0, 0, 0, 0.6639) 85.00%, rgba(0, 0, 0, 0.6535) 91.50%, rgba(0, 0, 0, 0.6500) 98.00%);
+}
+.homepage-header-gradient{
+  background: radial-gradient(11% 56% at 17% 50%, #461518 0%, transparent 100%), radial-gradient(11% 56% at 83% 50%, #461518 0%, transparent 100%);
+}
+.homepage-header-gradient2{
+  background: linear-gradient(0deg, transparent 0%, #6f181d 50%, transparent 100%);
+}
+.homepage-header-translate{
+  transform: translate(calc(-50% + 0.25rem), 0px);
+}
+.border-arad {
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom: none;
+  background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+  background-clip: padding-box;
+}
+.border-arad::before {
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}

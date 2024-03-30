@@ -10,7 +10,6 @@ const Navbar = () => {
   useEffect(()=>{
     const userDataString = sessionStorage.getItem("userData");
     const user = userDataString ? JSON.parse(userDataString) : null;
-    console.log(user)
     setIsLogin(user)
   },[])
   const handleLogout = () => {
