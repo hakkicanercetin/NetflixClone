@@ -6,11 +6,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-<<<<<<< HEAD
   apiKey: "AIzaSyABDopDPn6QwcEJkjhglT8eIR2kzlp8uoM",
-=======
-  apiKey: import.meta.env.VITE_GOOGLE_API_KEY,
->>>>>>> 4536b2f1bd5bf3c2a8c2ab0fc735de0983a05bed
   authDomain: "new-netflix-eb54b.firebaseapp.com",
   projectId: "new-netflix-eb54b",
   storageBucket: "new-netflix-eb54b.appspot.com",
