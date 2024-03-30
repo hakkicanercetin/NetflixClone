@@ -13,8 +13,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "10": "^0.0.1",
-    "@tryghost/content-api": "^1.11.20",
     "antd": "^5.15.2",
     "bootstrap": "^5.3.3",
     "firebase": "^10.8.1",
