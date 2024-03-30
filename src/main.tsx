@@ -3,18 +3,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 import "../index.css"
-//import Root from './Components/CommonComponents/Root';
-//import Register from './pages/Register';
-//import Login from './pages/Login';
-//import Browse, { getMovies } from './pages/Browse';
+import Root from './Components/CommonComponents/Root';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Browse, { getMovies } from './pages/Browse';
 import { Toaster } from 'react-hot-toast';
 import { ConfigProvider } from 'antd';
-//import Homepage from './pages/Homepage';
+import Homepage from './pages/Homepage';
 const router = createHashRouter([
   {
     path: "/",
-    element: <div>Merhaba</div>,
-    /* children:[
+    element: <Root></Root>,
+    children:[
       {
         index:true,
         element:<Homepage></Homepage>
@@ -32,7 +32,7 @@ const router = createHashRouter([
         element:<Browse />,
         loader:getMovies
       }
-    ] */
+    ]
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
